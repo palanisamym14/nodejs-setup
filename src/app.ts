@@ -49,7 +49,6 @@ class App {
    */
   private setEnvironment(): void {
     // dotenv.config({ path: ".env" });
-    global['__viewDir__'] = __dirname + '/views';
   }
 
   /**

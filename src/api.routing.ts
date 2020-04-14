@@ -5,7 +5,7 @@ export class ApiRouting {
   public static baseRoute = AppSetting.getConfig().BaseRoute;
   public static Register(app: express.Express) {
     app.use(ApiRouting.baseRoute + UserController.route, new UserController().router);
-    app.get('/ping', (req, res) => {
+    app.get(ApiRouting.baseRoute + '/ping', (req, res) => {
       res.send('Pong');
     });
   }
