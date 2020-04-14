@@ -1,6 +1,7 @@
 import * as SqlConnection from 'sequelize';
 import { AppSetting } from '../config/app.setting';
 import { logger } from '../config/winston';
+import CacheService from './cache.service';
 
 export class SequelizeConfig {
     private sequelize: SqlConnection.Sequelize;
@@ -25,6 +26,7 @@ export class SequelizeConfig {
         connection
             .authenticate()
             .then(() => {
+                CacheService.setInitialCache();
                 console.log(`Connection has been established to the database: ${dbInfo.host} - ${dbInfo.database} successfully.`);
             })
             .catch((err) => {

@@ -1,12 +1,15 @@
+import { ErrorHandler } from './../helpers';
 
-export class UserManager {
+export class UserManager extends ErrorHandler {
     public postUserLogin = async (body: any) => {
         try {
+            this.throwError();
             return {
                 status: 'success',
             };
         } catch (err) {
-            throw err;
+            const error = this.handleError(err);
+            throw error;
         }
     }
 }

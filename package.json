@@ -12,8 +12,10 @@
 		"watch-node": "nodemon dist/server.js",
 		"watch-ts": "tsc -w",
 		"tslint": "tslint --config ./tslint.json --project ./tsconfig.json"
-  },
-  "pre-commit": [ "tslint" ],
+	},
+	"pre-commit": [
+		"tslint"
+	],
 	"author": "ATC",
 	"license": "ISC",
 	"devDependencies": {
@@ -37,6 +39,7 @@
 		"http-build-query": "^0.7.0",
 		"moment": "^2.24.0",
 		"mysql2": "^2.0.0",
+		"node-cache": "^5.1.0",
 		"pdf-to-base64": "^1.0.2",
 		"request": "^2.88.0",
 		"request-promise": "^4.2.5",
