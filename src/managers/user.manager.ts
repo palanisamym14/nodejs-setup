@@ -1,10 +1,10 @@
 
 export class UserManager {
     public postUserLogin = async (body: any) => {
-        try{
-return {
+        try {
+            return {
                 status: 'success',
-            }
+            };
         } catch (err) {
             throw err;
         }
