@@ -1,9 +1,8 @@
 import express from 'express';
-import path from 'path';
-import { ApiRouting } from './api.routing';
-import { sequelize } from './helpers';
 import cors from 'cors';
+import { ApiRouting } from './api.routing';
 import { logger } from './config';
+import { sequelize } from './helpers';
 class App {
   public express: express.Express;
   // public routePrv: Routes = new Routes();

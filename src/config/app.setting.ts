@@ -1,5 +1,5 @@
-import { Environment } from './environment';
 import { ConfigManager } from './config.manager';
+import { Environment } from './environment';
 
 export class AppSetting {
 

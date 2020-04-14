@@ -1,7 +1,7 @@
 import { AppSetting } from './app.setting';
-import { Environment } from './environment';
-import { ProdConfig } from './config.prod';
 import { DevConfig } from './config.dev';
+import { ProdConfig } from './config.prod';
+import { Environment } from './environment';
 
 export class ConfigManager {
   public Config;

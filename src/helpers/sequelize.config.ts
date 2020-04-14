@@ -1,5 +1,5 @@
-import { AppSetting } from '../config/app.setting';
 import * as SqlConnection from 'sequelize';
+import { AppSetting } from '../config/app.setting';
 import { logger } from '../config/winston';
 
 export class SequelizeConfig {
@@ -13,14 +13,14 @@ export class SequelizeConfig {
             dialect: dbInfo.dbType,
             logging: console.log,
             pool: {
-                max:  10,
-                min:  0
+                max: 10,
+                min: 0
             }
         });
         this.ping(dbInfo);
     }
 
-    private ping(dbInfo, type= null) {
+    private ping(dbInfo, type = null) {
         const connection = this.sequelize;
         connection
             .authenticate()
