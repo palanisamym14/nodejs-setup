@@ -9,5 +9,6 @@ export const DevConfig = Object.freeze({
       dbType: 'mysql'
     },
   },
-  Port: 5000,  BaseRoute: '/api',
+  Port: 5000,
+  BaseRoute: '/api',
 });

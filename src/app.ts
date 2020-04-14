@@ -10,7 +10,7 @@ class App {
 
   constructor() {
     this.setEnvironment();
-    this.database();
+    // this.database();
     this.express = express();
     this.middleware();
     this.initializeControllers();

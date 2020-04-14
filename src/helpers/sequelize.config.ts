@@ -4,7 +4,6 @@ import { logger } from '../config/winston';
 
 export class SequelizeConfig {
     private sequelize: SqlConnection.Sequelize;
-    private sequelizeChatbot: SqlConnection.Sequelize;
 
     public setConnection() {
         const config = AppSetting.getConfig();
@@ -22,7 +21,7 @@ export class SequelizeConfig {
     }
 
     private ping(dbInfo, type= null) {
-        const connection = type ? this.sequelizeChatbot : this.sequelize;
+        const connection = this.sequelize;
         connection
             .authenticate()
             .then(() => {
@@ -36,10 +35,6 @@ export class SequelizeConfig {
 
     public getSequelize() {
         return this.sequelize;
-    }
-
-    public getChatbotSequelize() {
-        return this.sequelizeChatbot;
     }
 
 }

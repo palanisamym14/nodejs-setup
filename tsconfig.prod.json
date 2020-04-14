@@ -6,7 +6,7 @@
         "noImplicitAny": false,
         "moduleResolution": "node",
         "sourceMap": false,
-        "outDir": "./dist_chatbot",
+        "outDir": "./dist_test_app",
         "baseUrl": ".",
         "paths": {
             "*": [
