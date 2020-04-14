@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import { ApiRouting } from './api.routing';
 import { logger } from './config';
-import { sequelize } from './helpers';
+// import { sequelize } from './helpers';
 class App {
   public express: express.Express;
   // public routePrv: Routes = new Routes();
@@ -18,9 +18,9 @@ class App {
   /**
    * database connection
    */
-  private async database() {
-    sequelize.setConnection();
-  }
+  // private async database() {
+  //   sequelize.setConnection();
+  // }
 
   /**
    * http(s) request middleware

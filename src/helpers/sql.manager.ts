@@ -4,7 +4,6 @@ import * as SqlConnection from 'sequelize';
 export class SqlManager {
 
     private sequelizeConnection: SqlConnection.Sequelize;
-    private params;
 
     constructor() {
         this.sequelizeConnection = sequelize.getSequelize();
