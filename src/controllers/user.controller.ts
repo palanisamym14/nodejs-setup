@@ -19,10 +19,9 @@ export class UserController extends ErrorHandler {
   private userLogin = async (request, response, next) => {
     try {
       const responseObj = await new UserManager().postUserLogin(request.body);
-      response.status(200).send(responseObj);
       ResponseHelper.Ok(response, responseObj);
     } catch (error) {
-      ResponseHelper.Ok(response, error);
+      ResponseHelper.Error(request, response, error);
     }
   }
 }
